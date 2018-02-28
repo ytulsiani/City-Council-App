@@ -9,6 +9,7 @@ import HomeScreen from '../screens/HomeScreen';
 import LinksScreen from '../screens/LinksScreen';
 import SettingsScreen from '../screens/SettingsScreen';
 import NotificationScreen from '../screens/NotificationScreen';
+import PostScreen from '../screens/PostScreen';
 
 export default TabNavigator(
   {
@@ -18,11 +19,15 @@ export default TabNavigator(
     Links: {
       screen: LinksScreen,
     },
-    Settings: {
-      screen: SettingsScreen,
+    Post:
+    {
+      screen: PostScreen,
     },
     Notifications: {
       screen: NotificationScreen,
+    },
+    Settings: {
+      screen: SettingsScreen,
     }
   },
   {
@@ -42,10 +47,14 @@ export default TabNavigator(
             break;
           case 'Settings':
             iconName =
+              Platform.OS === 'ios' ? `ios-settings${focused ? '' : '-outline'}` : 'md-settings';
+              break;
+          case 'Post':
+            iconName =
               Platform.OS === 'ios' ? `ios-create${focused ? '' : '-outline'}` : 'md-create';
               break;
           case 'Notifications':
-            iconName = Platform.OS === 'ios' ? `ios-notifications${focused ? '' : '-outline'}` : 'md-notification';
+            iconName = Platform.OS === 'ios' ? `ios-notifications${focused ? '' : '-outline'}` : 'md-notifications';
         }
         return (
           <Ionicons
