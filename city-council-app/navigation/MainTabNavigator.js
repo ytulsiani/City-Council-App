@@ -38,11 +38,14 @@ export default TabNavigator(
                 : 'md-information-circle';
             break;
           case 'Links':
-            iconName = Platform.OS === 'ios' ? `ios-link${focused ? '' : '-outline'}` : 'md-link';
+            iconName = Platform.OS === 'ios' ? `ios-search${focused ? '' : '-outline'}` : 'md-link';
             break;
           case 'Settings':
             iconName =
-              Platform.OS === 'ios' ? `ios-options${focused ? '' : '-outline'}` : 'md-options';
+              Platform.OS === 'ios' ? `ios-create${focused ? '' : '-outline'}` : 'md-options';
+              break;
+          case 'Notifications':
+            iconName = Platform.OS === 'ios' ? `ios-notifications${focused ? '' : '-outline'}` : 'md-notification';
         }
         return (
           <Ionicons
