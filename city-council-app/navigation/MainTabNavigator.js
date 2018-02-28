@@ -34,15 +34,15 @@ export default TabNavigator(
           case 'Home':
             iconName =
               Platform.OS === 'ios'
-                ? `ios-information-circle${focused ? '' : '-outline'}`
-                : 'md-information-circle';
+                ? `ios-paper${focused ? '' : '-outline'}`
+                : 'md-paper';
             break;
           case 'Links':
-            iconName = Platform.OS === 'ios' ? `ios-search${focused ? '' : '-outline'}` : 'md-link';
+            iconName = Platform.OS === 'ios' ? `ios-search${focused ? '' : '-outline'}` : 'md-search';
             break;
           case 'Settings':
             iconName =
-              Platform.OS === 'ios' ? `ios-create${focused ? '' : '-outline'}` : 'md-options';
+              Platform.OS === 'ios' ? `ios-create${focused ? '' : '-outline'}` : 'md-create';
               break;
           case 'Notifications':
             iconName = Platform.OS === 'ios' ? `ios-notifications${focused ? '' : '-outline'}` : 'md-notification';
